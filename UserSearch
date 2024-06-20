@@ -1,13 +1,13 @@
-# Fase 1 
+#Fase 1 
 
 
 En esta fase inicial, realizamos un escaneo de puertos para identificar los servicios disponibles en la máquina objetivo. Utilizamos la herramienta Nmap con una serie de opciones para obtener información detallada y realizar un análisis exhaustivo de los puertos abiertos.
 
-### Comando Nmap utilizado:
+###Comando Nmap utilizado:
 
 `sudo nmap -p- --open -sS -sC -sV --min-rate 5000 -vvv -n -Pn 192.168.52.139 -oN Escaneo`
 
-### Detalles del Comando:
+###Detalles del Comando:
 
 - `sudo nmap -p- --open -sS -sC -sV --min-rate 5000 -vvv -n -Pn 192.168.52.139 -oN Escaneo`
 - `-p-`: Escaneo de todos los puertos.
