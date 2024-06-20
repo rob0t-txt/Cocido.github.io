@@ -1,0 +1,33 @@
+# Fase 1 
+
+
+En esta fase inicial, realizamos un escaneo de puertos para identificar los servicios disponibles en la máquina objetivo. Utilizamos la herramienta Nmap con una serie de opciones para obtener información detallada y realizar un análisis exhaustivo de los puertos abiertos.
+
+### Comando Nmap utilizado:
+
+`sudo nmap -p- --open -sS -sC -sV --min-rate 5000 -vvv -n -Pn 192.168.52.139 -oN Escaneo`
+
+### Detalles del Comando:
+
+- `sudo nmap -p- --open -sS -sC -sV --min-rate 5000 -vvv -n -Pn 192.168.52.139 -oN Escaneo`
+- `-p-`: Escaneo de todos los puertos.
+- `--open`: Muestra solo puertos abiertos.
+- `-sS`: Escaneo SYN para determinar el estado de los puertos.
+- `-sC`: Activa detección de versiones y vulnerabilidades.
+- `-sV`: Escaneo de versiones de servicios.
+- `--min-rate 5000`: Velocidad mínima de escaneo.
+- `-vvv`: Verbosidad muy alta para información detallada.
+- `-n`: Desactiva la resolución de DNS.
+- `-Pn`: Ignora la detección de hosts en línea.
+- `192.168.52.139`: IP de la máquina objetivo.
+- `-oN Escaneo`: Guarda resultados en archivo "Escaneo".
+
+### Resultados:
+
+#### Puertos Abiertos:
+
+1. **22/tcp (SSH ):** OpenSSH 8.9p1
+2. **80/tcp (HTTP ):** Apache httpd 2.4.59
+
+### Puerto 80
+Al identificar que el puerto 80 estaba abierto durante el escaneo, se procedió a ingresar la dirección IP en el navegador. Esto llevó a una pagina web con una imagen de un huevo kínder.
